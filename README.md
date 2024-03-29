@@ -33,7 +33,7 @@ Triangle:
 
 Пример использования:
 
-\```
+```csharp
 
 using GeometryToolkit;
 
@@ -55,4 +55,4 @@ public static void Main(string[] args)
     Console.WriteLine($"Triangle area: {triangleArea}");
 }
 
-\```
+```
