@@ -12,6 +12,7 @@ GeometryToolkit.Tests: содержит модульные тесты для к�
 ### Интерфейсы:
 
 #### IShape: 
+
 Определяет один метод GetArea(), который вычисляет площадь фигуры.
 
 ### Классы:
@@ -32,6 +33,10 @@ GeometryToolkit.Tests: содержит модульные тесты для к�
 Метод IsRegularTriangle() проверяет, равны ли все три стороны треугольника, и возвращает true, если это правильный треугольник, otherwise false.
 Вспомогательный метод IsValidTriangle(double a, double b, double c) проверяет, удовлетворяют ли заданные длины сторон теореме о неравенстве треугольника.
 
+#### GeometryCalculator:
+
+Класс GeometryCalculator предоставляет метод для вычисления площади произвольной фигуры, реализующей интерфейс IShape.
+
 ### Тестирование:
 
 Пространство имен GeometryToolkit.Tests содержит модульные тесты для классов Circle и Triangle с использованием фреймворка Xunit. Эти тесты проверяют функциональность метода GetArea() и метода IsRegularTriangle() класса Triangle.
@@ -44,20 +49,16 @@ using GeometryToolkit;
 
 public static void Main(string[] args)
 {
-    // Create a circle with radius 5
-    Circle circle = new Circle(5);
-
-    // Get the area of the circle
-    double circleArea = circle.GetArea();
-
-    // Create a triangle with sides 3, 4, and 5
-    Triangle triangle = new Triangle(3, 4, 5);
-
-    // Get the area of the triangle
-    double triangleArea = triangle.GetArea();
-
-    Console.WriteLine($"Circle area: {circleArea}");
-    Console.WriteLine($"Triangle area: {triangleArea}");
+    var circle = new Circle(5);
+    var triangle = new Triangle(3, 4, 5);
+    
+    var calculator = new GeometryCalculator();
+    
+    var circleArea = calculator.CalculateArea(circle);
+    var triangleArea = calculator.CalculateArea(triangle);
+    
+    Console.WriteLine($"Площадь круга: {circleArea}");
+    Console.WriteLine($"Площадь треугольника: {triangleArea}");
 }
 
 ```
