@@ -6,7 +6,7 @@ GeometryToolkit - это проект на C#, содержащий классы
 
 ### Пространства имен:
 
-GeometryToolkit: содержит основные классы фигур (Circle и Triangle) и интерфейс IShape.
+  GeometryToolkit: содержит основные классы фигур (Circle и Triangle) и интерфейс IShape.
 GeometryToolkit.Tests: содержит модульные тесты для классов фигур с использованием фреймворка Xunit.
 
 ### Интерфейсы:
