@@ -1,8 +1,8 @@
-#Документация проекта GeometryToolkit
+# Документация проекта GeometryToolkit
 
-##Описание проекта:
+## Описание проекта:
 
-###GeometryToolkit - это проект на C#, содержащий классы для основных геометрических фигур и вспомогательный класс для вычисления их площадей.
+GeometryToolkit - это проект на C#, содержащий классы для основных геометрических фигур и вспомогательный класс для вычисления их площадей.
 
 Пространства имен:
 
@@ -34,6 +34,7 @@ Triangle:
 Пример использования:
 
 \```
+
 using GeometryToolkit;
 
 public static void Main(string[] args)
@@ -53,4 +54,5 @@ public static void Main(string[] args)
     Console.WriteLine($"Circle area: {circleArea}");
     Console.WriteLine($"Triangle area: {triangleArea}");
 }
+
 \```
