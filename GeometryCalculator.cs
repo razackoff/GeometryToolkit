@@ -7,6 +7,6 @@ public class GeometryCalculator
         if (shape == null)
             throw new ArgumentNullException(nameof(shape), "Фигура не может быть null.");
 
-        return shape.GetArea();
+        return shape.CalculateArea();
     }
 }

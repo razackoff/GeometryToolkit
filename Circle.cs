@@ -12,7 +12,7 @@ public class Circle : IShape
         _radius = radius;
     }
 
-    public double GetArea()
+    public double CalculateArea()
     {
         return Math.PI * _radius * _radius;
     }

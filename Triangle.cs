@@ -16,19 +16,26 @@ public class Triangle : IShape
         _sideC = sideC;
     }
 
-    public double GetArea()
+    public double CalculateArea()
     {
         double s = (_sideA + _sideB + _sideC) / 2;
         return Math.Sqrt(s * (s - _sideA) * (s - _sideB) * (s - _sideC));
     }
     
-    public bool IsRegularTriangle()
+    public bool IsRightTriangle()
     {
-        return _sideA == _sideB && _sideA == _sideC && _sideB == _sideC;
+        double maxSide = Math.Max(_sideA, Math.Max(_sideB, _sideC));
+        double sumOfSquares = Math.Pow(_sideA, 2) + Math.Pow(_sideB, 2) + Math.Pow(_sideC, 2);
+        double maxSideSquare = Math.Pow(maxSide, 2);
+        
+        return Math.Abs(maxSideSquare - (sumOfSquares - maxSideSquare)) < 1e-10;
     }
 
     private bool IsValidTriangle(double a, double b, double c)
     {
+        if (a <= 0 || b <= 0 || c <= 0)
+            return false;
+        
         return a + b > c && a + c > b && b + c > a;
     }
 }
